@@ -1,0 +1,17 @@
+{
+  "build": {
+    "nixpacksPlan": {
+      "phases": {
+        "setup": {
+          "pkgs": ["gcc", "python3-dev", "libffi-dev", "libssl-dev"]
+        },
+        "install": {
+          "cmds": [
+            "pip install --upgrade pip setuptools wheel",
+            "pip install -r requirements.txt --no-cache-dir"
+          ]
+        }
+      }
+    }
+  }
+}
